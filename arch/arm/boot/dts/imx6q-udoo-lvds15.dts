@@ -1,9 +1,11 @@
 /*
  * Copyright 2013 Freescale Semiconductor, Inc.
  * Copyright 2015 Aidilab, Srl.
+ * Copyright 2017 DS Software GmbH
  *
  * Author: Fabio Estevam <fabio.estevam@freescale.com>
  * Author: Ettore Chimenti <ettore.chimenti@udoo.org>
+ * Author: Johann Glaser <Johann.Glaser@gmx.at>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
@@ -34,7 +36,7 @@
 		compatible = "fsl,mxc_sdc_fb";
 		disp_dev = "ldb";
 		default_bpp = <32>;
-		interface_pix_fmt = "RGB24";
+		interface_pix_fmt = "RGB666";
 		mode_str ="";
 		int_clk = <0>;
 		late_init = <1>;
@@ -46,7 +48,7 @@
 	status = "okay";
 	lvds-channel@0 {        
 		status = "okay";
-		fsl,data-width = <24>;
+		fsl,data-width = <18>;
 		display-timings {
 			native-mode = <&timing1>;
 			timing1: 1366x768 {
