@@ -304,6 +304,13 @@ config TOUCHSCREEN_GOODIX
           To compile this driver as a module, choose M here: the
           module will be called goodix.
 
+config TOUCHSCREEN_GSLX680
+	tristate  "Silead GSLx680 touchscreen driver"
+	depends on INPUT && I2C
+	default m
+	help
+	  gsl1680,gsl2680,gsl3680 touchscreen driver
+
 config TOUCHSCREEN_ILI210X
 	tristate "Ilitek ILI210X based touchscreen"
 	depends on I2C
